@@ -4,83 +4,89 @@
 	<title>Тест</title>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="css/reset.css" />
+	<!-- для тестового задания reset.css лучше не исплользуй, замени своими стилями -->
 	<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-	<header>
-		<h1>Main test chapters*</h1>
-		<img src="images/logo.png" alt="logo" />
-	</header>
-	<nav>
-		<ul>
-	      <li id="item1" class="nav_item item_active">Navigation 1</li>
-	      <li id="item2" class="nav_item">Navigation 2</li>
-	      <li id="item3" class="nav_item">Navigation 3</li>
-    </ul>
-	</nav>
-	<div class="tab-list">
-		<section id="tab1" class="tab">
-			<h2>This is the heading for the lorem ipsum</h2>
-			<p class="tab1_title">Thia a simple line <a href="">google.com</a></p>
-			<table>
-        <thead>
-          <tr>
-            <td>Title</td>
-            <td>Some parametr</td>
-            <td>Color</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-            <tr>
-              <td>Title1</td>
-              <td>Param1: <span class="bold">Value</span></td>
-              <td><div class="cube"><div class="first"></div></div></td>
-              <td>Lorem Ipsum is simply dummy text of the printing and typeset- ting industry. Lorem </td>
-            </tr>
-            <tr>
-              <td>Title2</td>
-              <td>Param1: <span class="bold">Value</span></td>
-              <td><div class="cube"><div class="second"></div></div></td>
-              <td>Lorem Ipsum is simply dummy text of the printing and typeset- ting industry. Lorem </td>
-            </tr>
-            <tr>
-              <td>Title3</td>
-              <td>Param1: <span class="bold">Value</span></td>
-              <td><div class="cube"><div class="third"></div></div></td>
-              <td>Lorem Ipsum is simply dummy text of the printing and typeset-ting industry. Lorem </td>
-            </tr>
-        </tbody>
-      </table>
-		</section>
-		<section id="tab2" class="tab">
-      <article>
-        <h2>This is the heading for the lorem ipsum</h2>
-        <p class="first-letter">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker includ-ing versions of Lorem Ipsum.</p>
-        <p class="indent">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker includ-ing versions of Lorem Ipsum.</p>
-        <img src="images/img1.png" alt="img1" />
-      </article>
-		</section>
-		<section id="tab3" class="tab">
-      <article>
-        <h2>This is the heading for the lorem ipsum</h2>
-        <div class="left-col col">
-          <span>An Unordered List:</span>
-          <ul>
-            <li>Coffee</li>
-            <li>Tea</li>
-            <li>Milk</li>
-            <li>Juice</li>  
-          </ul>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop</p>
-        </div>
-        <div class="right-col col">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the  of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since a the 1500s, when an unknown </p>
-        </div>
-      </article>
-		</section>
+	<div class="content-wrapper">
+	<!-- смотри фарматирование если табы то табы должны быть визде, если пробелы то пробелы -->
+		<header>
+			<h1>Main test chapters*</h1>
+			<img src="images/logo.png" alt="logo" />
+		</header>
+		<nav class="main-navigation">
+			<!-- <ul>
+				<li class="active">Navigation 1</li>
+				<li>Navigation 2</li>
+				<li>Navigation 3</li>
+			</ul> -->
+			<!-- смотри javascript -->
+		</nav>
+		<div class="tab-list">
+			<section class="tab" data-title="Navigation 1">
+				<h2>This is the heading for the lorem ipsum</h2>
+				<p class="caption">Thia a simple line <a href="">google.com</a></p>
+				<table>
+					<thead> <!-- В thead исплользуються в основном теги th, хотя можно и td, но лучше th-->
+						<tr>
+							<th>Title</th>
+							<th>Some parametr</th>
+							<th>Color</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Title1</td>
+							<td>Param1: <b>Value</b></td><!-- как вариант strong-->
+							<td><div class="cube"><div class="first"></div></div></td>
+							<td>Lorem Ipsum is simply dummy text of the printing and typeset- ting industry. Lorem </td>
+						</tr>
+						<tr>
+							<td>Title2</td>
+							<td>Param1: <b>Value</b></td>
+							<td><div class="cube"><div class="second"></div></div></td>
+							<td>Lorem Ipsum is simply dummy text of the printing and typeset- ting industry. Lorem </td>
+						</tr>
+						<tr>
+							<td>Title3</td>
+							<td>Param1: <b>Value</b></td>
+							<td><div class="cube"><div class="third"></div></div></td>
+							<td>Lorem Ipsum is simply dummy text of the printing and typeset-ting industry. Lorem </td>
+						</tr>
+					</tbody>
+				  </table>
+			</section>
+			<article class="tab" data-title="Navigation 2">
+				<h2>This is the heading for the lorem ipsum</h2>
+				<p class="first-letter">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker includ-ing versions of Lorem Ipsum.</p>
+				<p class="indent">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker includ-ing versions of Lorem Ipsum.</p>
+				<img src="images/img1.png" alt="clock" /> <!-- разберись для чего алт, это не верно  img[alt="img1"] -->
+			</article>
+			<article class="tab" data-title="Navigation 3">
+				<h2>This is the heading for the lorem ipsum</h2>
+				<div class="left-col col">
+					<p>An Unordered List:</p> <!-- span только в нутри тектовых тегов P, H1...H6 -->
+					<ul>
+						<li>Coffee</li>
+						<li>Tea</li>
+						<li>Milk</li>
+						<li>Juice</li>  
+					</ul>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop</p>
+				</div>
+				<div class="right-col col">
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the  of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since a the 1500s, when an unknown</p>
+				</div>
+			</article>
+		</div>
+		<footer>*All rights are protectied</footer>
 	</div>
-	<footer>*All rights are protectied</footer>
-  <script src="js/myscript.js"></script>
+	<script src="js/myscript.js"></script>
 </body>
 </html>
+<!-- 
+	мало CSS3
+	используй больше тегов HTML5 и CSS3, 
+	например открываешь http://htmlbook.ru/html Справочник по HTML, смтришь сначало в сторону HTML5 тегов а потом уже в сорону остальных
+-->
