@@ -39,10 +39,12 @@ nav{
 	padding-left: 21px;
     height: 47px;
     margin-bottom: 1px;
-    font: 18px Arial;
+    
+	font: normal 18px/48px Arial;
     color: #565656;
-    line-height: 48px;
-    background-image:-webkit-linear-gradient(top, rgba(160,160,160,1) 0%,
+    
+    
+	background-image:-webkit-linear-gradient(top, rgba(160,160,160,1) 0%,
                                                   rgba(198,198,198,1) 22%,
                                                   rgba(238,238,238,1) 44%,
                                                   rgba(238,238,238,1) 54%,
